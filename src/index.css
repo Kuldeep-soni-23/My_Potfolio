@@ -1,0 +1,51 @@
+@import url('https://api.fontshare.com/v2/css?f[]=pp-mori@400,500,600,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-green: #4ade80;
+}
+
+body {
+  font-family: 'PP Mori', sans-serif;
+  @apply bg-gray-900 text-gray-100;
+}
+
+.nav-link {
+  @apply relative px-4 py-2;
+}
+
+.nav-link::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-green-400 transition-all duration-300;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+.social-icon {
+  @apply transition-all duration-300 hover:text-green-400 hover:scale-110 hover:animate-bounce;
+}
+
+.skill-bar {
+  @apply h-2 bg-gray-700 rounded-full overflow-hidden;
+}
+
+.skill-progress {
+  @apply h-full bg-green-400 transition-all duration-1000;
+}
+
+.project-card {
+  @apply bg-gray-800 rounded-lg p-6 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl;
+}
+
+.form-input {
+  @apply w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 focus:outline-none focus:border-green-400 transition-all duration-300;
+}
+
+.button {
+  @apply bg-green-400 text-gray-900 font-semibold px-6 py-2 rounded-lg transition-all duration-300 hover:bg-green-500 hover:transform hover:scale-105;
+}
